@@ -11,6 +11,7 @@ bgColor = [r, g, b] = [138, 138, 138]
 
 balls = [Ball("Ball/fire.png", [3, 1], [0,0], [30,30])]
 balls = [Ball("Ball/it.png", [2, 4], [0,0], [15,20])]
+balls = [Ball("Ball/FaZe_Doge.png", [4, 3], [0,0], [10,30])]
 
 while True:
     for event in pygame.event.get():
