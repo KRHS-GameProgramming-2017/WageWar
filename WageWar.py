@@ -37,6 +37,15 @@ while True:
         ball.move()
         ball.wallBounce(size)
         
+        for ball in balls:
+        screen.blit(it.png, ball.rect)
+    pygame.display.flip()
+    clock.tick(60)
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+        
         
             
             
