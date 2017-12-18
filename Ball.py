@@ -53,3 +53,11 @@ class Ball():
                 self.speed[0]  = -self.speed[0]
                 self.speed[2]  = -self.speed[2]
 
+
+
+
+
+
+
+
+

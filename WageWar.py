@@ -22,8 +22,7 @@ while True:
         ball.move()
         ball.wallBounce(size)
         
-        
-            
+     
             
     for ball in balls:
         screen.blit(ball.image, ball.rect)
@@ -39,7 +38,7 @@ while True:
         ball.wallBounce(size)
         
         for ball in balls:
-        screen.blit(it.png, ball.rect)
+            screen.blit(it.png, ball.rect)
     pygame.display.flip()
     clock.tick(60)
     
