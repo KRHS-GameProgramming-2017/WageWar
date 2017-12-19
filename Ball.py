@@ -5,6 +5,9 @@ class Ball():
          self.image = pygame.image.load(image)
          if size:
              self.image = pygame.transform.scale(self.image, size)
+             self.size = size
+         else:
+             self.size = 50
          self.rect = self.image.get_rect(topleft = pos)
          self.speed = [self.speedx,
                        self.speedy] = speed
@@ -45,8 +48,7 @@ class Ball():
             self.speed[0]  = -self.speed[0]
         if self.rect.top < 0 or self.rect.bottom > height:
             self.speed[1]  = -self.speed[1]
-            
-            
+                        
     def ballBounce(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
