@@ -10,9 +10,9 @@ screen = pygame.display.set_mode(size)
 
 bgColor = [r, g, b] = [138, 138, 138]
 
-balls = [Ball("Ball/fire.png", [3, 1], [0,0], [30,30]),
-        Ball("Ball/it.png", [2, 4], [0,0], [20,20]),
-        Ball("Ball/FaZe_Doge.png", [4, 3], [0,0], [10,10])]
+balls = [Ball("Ball/fire.png", [3, 1], [50,100], 30),
+        Ball("Ball/it.png", [2, 4], [200,25], 20),
+        Ball("Ball/FaZe_Doge.png", [4, 3], [400,400], 10)]
         
 player=PlayerBall("Ball/it.png", [ width/2, height/2])
 
@@ -28,6 +28,14 @@ while True:
     player.move()
     player.wallBounce(size)
     
+    for attacker in balls:
+        for defender in balls:
+            if attacker != defender:
+                attacker.ballBounce(defender)
+                
+    for ball in balls:
+        if not ball.living:
+            balls.remove(ball)
         
      
     screen.fill (bgColor)        
