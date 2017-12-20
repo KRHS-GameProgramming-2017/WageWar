@@ -50,6 +50,8 @@ while True:
     player.wallBounce(size)
     
     for attacker in balls:
+        player.ballBounce(attacker)
+        attacker.ballBounce(player)
         for defender in balls:
             if attacker != defender:
                 attacker.ballBounce(defender)
