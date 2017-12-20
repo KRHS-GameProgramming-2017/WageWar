@@ -20,11 +20,6 @@ class PlayerBall(Ball):
             self.move()
             self.speed[1] = 0
             
-    def ballBounce(self, other):
-        if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
-            if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
-                return True
-        return False        
         
     def go(self, direction):
         if direction == "up":
