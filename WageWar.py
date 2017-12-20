@@ -9,6 +9,7 @@ size = [width, height] = 800, 600
 screen = pygame.display.set_mode(size)
 
 bgColor = [r, g, b] = [138, 138, 138]
+        if event.type == pygame.QUIT:+
 
 balls = [Ball("Ball/fire.png", [3, 1], [50,100], 30),
         Ball("Ball/it.png", [2, 4], [200,25], 20),
@@ -18,7 +19,6 @@ player=PlayerBall("Ball/it.png", [ width/2, height/2])
 
 while True:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
             sys.exit()
         
     for ball in balls:
