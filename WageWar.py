@@ -20,6 +20,8 @@ player=PlayerBall("Ball/it.png", [ width/2, height/2])
 while True:
     for event in pygame.event.get():
             sys.exit()
+            
+    
         
     for ball in balls:
         ball.move()
