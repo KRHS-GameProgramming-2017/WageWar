@@ -5,7 +5,7 @@ from Ball import *
 class PlayerBall(Ball):
     def __init__(self, image, pos = [0,0]):
         Ball.__init__(self,image,[0,0],pos,25)
-        self.maxSpeed = 15
+        self.maxSpeed = 8
     
     def wallBounce(self, size):
         width = size[0]
