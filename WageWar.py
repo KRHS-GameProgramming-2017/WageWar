@@ -20,7 +20,7 @@ player=PlayerBall("Ball/it.png", [ width/2, height/2])
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            sys.exit()
+            sys.exit()   
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP or event.key == pygame.K_w:
                 player.go("up")
