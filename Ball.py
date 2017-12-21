@@ -2,9 +2,9 @@ import pygame, math
 
 class Ball():
     def __init__(self, image, speed = [0,0], pos = [0,0], size = None):
-         self.image = pygame.image.load(image)
+         self.baseImage = pygame.image.load(image)
          if size:
-             self.image = pygame.transform.scale(self.image, [size, size])
+             self.image = pygame.transform.scale(self.baseImage, [size, size])
              self.size = size
          else:
              self.size = 50
@@ -31,7 +31,7 @@ class Ball():
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.size > other.size:
                     self.size += other.size
-                    self.image = pygame.transform.scale(self.image, [self.size, self.size])
+                    self.image = pygame.transform.scale(self.baseImage, [self.size, self.size])
                     self.rect = self.image.get_rect(center = self.rect.center)
                 else:
                     self.living = False;
