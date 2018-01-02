@@ -17,7 +17,7 @@ balls = [Ball("Ball/fire.png", [3, 1], [50,100], 30),
         Ball("Ball/it.png", [3, 4], [150,200], 30),
         Ball("Ball/FaZe_Doge.png", [3, 6], [200,300], 40),
         Ball("Ball/fire.png", [3, 1], [70,100], 10),
-        Ball("Ball/itsboogie2988.png", [4, 7], [100,400], 50)]
+        Ball("Ball/itsboogie2988.png", [3, 5], [300,400], 40)]
         
 player=PlayerBall("Ball/it.png", [ width/2, height/2])
 
