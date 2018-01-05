@@ -10,7 +10,7 @@ screen = pygame.display.set_mode(size)
 
 bgColor = [r, g, b] = [138, 138, 138]
 
-
+        
 
 
 while True:
