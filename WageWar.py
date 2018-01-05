@@ -1,4 +1,4 @@
-import pygame, sys, math, random
+ import pygame, sys, math, random
 from Ball import *
 from PlayerBall import *
 pygame.init()
@@ -11,7 +11,6 @@ screen = pygame.display.set_mode(size)
 bgColor = [r, g, b] = [138, 138, 138]
 
         
-
 
 while True:
     balls = [Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], 30),
