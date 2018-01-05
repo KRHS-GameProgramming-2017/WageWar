@@ -1,4 +1,4 @@
-import pygame, sys, math, random
+ import pygame, sys, math, random
 from Ball import *
 from PlayerBall import *
 pygame.init()
@@ -20,7 +20,6 @@ balls = [Ball("Ball/fire.png", [3, 1], [50,100], 30),
         Ball("Ball/itsboogie2988.png", [3, 5], [300,400], 40)]
         
 player=PlayerBall("Ball/it.png", [ width/2, height/2])
-
 
 while True:
     for event in pygame.event.get():
