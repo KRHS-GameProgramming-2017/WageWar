@@ -1,5 +1,5 @@
 import pygame, sys, math, random
-from Ball import *
+from Ball import *                  
 from PlayerBall import *
 pygame.init()
 
@@ -10,14 +10,20 @@ screen = pygame.display.set_mode(size)
 
 bgColor = [r, g, b] = [138, 138, 138]
 
-balls = [Ball("Ball/fire.png", [3, 1], [50,100], 30),
-        Ball("Ball/it.png", [2, 4], [200,25], 20),
-        Ball("Ball/FaZe_Doge.png", [4, 3], [400,400], 10),
-        Ball("Ball/FaZe_Doge.png", [10, 3], [300,200], 20),
-        Ball("Ball/it.png", [3, 4], [150,200], 30),
-        Ball("Ball/FaZe_Doge.png", [3, 6], [200,300], 40),
-        Ball("Ball/fire.png", [3, 1], [70,100], 10),
-        Ball("Ball/itsboogie2988.png", [3, 5], [300,400], 40)]
+              #  image              speed       position    size
+balls = [Ball("Ball/fire.png",      [3, 1],     [50,100],   30),
+        Ball("Ball/it.png",         [2, 4],     [200,25],   20),
+        Ball("Ball/FaZe_Doge.png",  [4, 3],     [400,400],  10),
+        Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
+        Ball("Ball/it.png",         [3, 4],     [150,200],  30),
+        Ball("Ball/FaZe_Doge.png",  [3, 6],     [200,300],  40),
+        Ball("Ball/fire.png",       [3, 1],     [170,100],   10),
+        Ball("Ball/itsboogie2988.png", [3, 5],  [300,400],  40),
+        Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
+        Ball("Ball/it.png",         [1, 3],     [70,200],   20),
+        Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
+        Ball("Ball/fire.png",       [3, 10],    [70,20],    10),
+        Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10)]
         
 player=PlayerBall("Ball/it.png", [ width/2, height/2])
 

@@ -36,6 +36,8 @@ class Ball():
                 else:
                     self.living = False;
                 
+     
+                
         
 
     
