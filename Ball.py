@@ -20,9 +20,18 @@ class Ball():
         width = size[0]
         height = size[1]
         
-        if self.rect.left < 0 or self.rect.right > width:
-            self.speed[0]  = -self.speed[0]
-        if self.rect.top < 0 or self.rect.bottom > height:
+        if self.rect.left < 0:
+            self.rect.left = 1
+            self.speed[0] = -self.speed[0]
+        elif  self.rect.right > width:
+            self.rect.right = width -1
+            self.speed[0] = -self.speed[0]
+
+        if self.rect.top < 0:
+            self.rect.top = 1
+            self.speed[1]  = -self.speed[1]
+        elif self.rect.bottom > height:
+            self.rect.bottom = height -1
             self.speed[1]  = -self.speed[1]
             
             
@@ -33,6 +42,7 @@ class Ball():
                     self.size += other.size
                     self.image = pygame.transform.scale(self.baseImage, [self.size, self.size])
                     self.rect = self.image.get_rect(center = self.rect.center)
+                    
                 else:
                     self.living = False;
                 

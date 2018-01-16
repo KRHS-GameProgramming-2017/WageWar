@@ -1,4 +1,4 @@
- import pygame, sys, math, random
+import pygame,sys,math,random
 from Ball import *
 from PlayerBall import *
 pygame.init()
@@ -13,17 +13,16 @@ bgColor = [r, g, b] = [138, 138, 138]
         
 
 while True:
-    balls = [Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], 30),
-        Ball("Ball/it.png", [2, 4], [random.randint(0,width),random.randint(0,height)], 20),
-        Ball("Ball/FaZe_Doge.png", [4, 3], [random.randint(0,width),random.randint(0,height)], 10),
-        Ball("Ball/FaZe_Doge.png", [10, 3], [random.randint(0,width),random.randint(0,height)], 40),
-        Ball("Ball/it.png", [3, 4], [random.randint(0,width),random.randint(0,height)], 30),
-        Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], 40),
-        Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], 20),
+    balls = [Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/it.png", [2, 4], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/FaZe_Doge.png", [4, 3], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/FaZe_Doge.png", [10, 3], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/it.png", [3, 4], [random.randint(0,width),random.randint(0,height)], random.randint(5, 50)),
+        Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50))]
         
-        Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], 50)]
-        
-    player=PlayerBall("Ball/it.png", [ width/2, height/2])
+    player=PlayerBall("Ball/it.png", [ width/2, height/2],random.randint(10, 50))
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
