@@ -10,7 +10,6 @@ screen = pygame.display.set_mode(size)
 
 bgColor = [r, g, b] = [138, 138, 138]
 
-        
 
 while True:
     balls = [Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
@@ -21,8 +20,14 @@ while True:
         Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50))]
+        Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
+        Ball("Ball/it.png",         [1, 3],     [70,200],   20),
+        Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
+        Ball("Ball/fire.png",       [3, 10],    [70,20],    10),
+        Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
+        Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
-    player=PlayerBall("Ball/it.png", [ width/2, height/2],random.randint(10, 50))
+    player=PlayerBall("Ball/it.png", [ width/2, height/2])
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
