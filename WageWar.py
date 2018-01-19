@@ -1,5 +1,5 @@
-import pygame, sys, math, random
-from Ball import *                  
+import pygame,sys,math,random
+from Ball import *
 from PlayerBall import *
 pygame.init()
 
@@ -12,20 +12,20 @@ bgColor = [r, g, b] = [138, 138, 138]
 
 
 while True:
-    balls = [Ball("Ball/fire.png",      [3, 1],     [50,100],   30),
-        	Ball("Ball/it.png",         [2, 4],     [200,25],   20),
-        	Ball("Ball/FaZe_Doge.png",  [4, 3],     [400,400],  10),
-       		Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
-       		Ball("Ball/it.png",         [3, 4],     [150,200],  30),
-        	Ball("Ball/FaZe_Doge.png",  [3, 6],     [200,300],  40),
-        	Ball("Ball/fire.png",       [3, 1],     [170,100],  10),
-        	Ball("Ball/itsboogie2988.png", [3, 5],  [100,200],  40),
-        	Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
-        	Ball("Ball/it.png",         [1, 3],     [70,200],   20),
-        	Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
-        	Ball("Ball/fire.png",       [3, 10],    [70,20],    10),
-        	Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
-            Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
+    balls = [Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/it.png", [2, 4], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/FaZe_Doge.png", [4, 3], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/FaZe_Doge.png", [10, 3], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/it.png", [3, 4], [random.randint(0,width),random.randint(0,height)], random.randint(5, 50)),
+        Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
+        Ball("Ball/it.png",         [1, 3],     [70,200],   20),
+        Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
+        Ball("Ball/fire.png",       [3, 10],    [70,20],    10),
+        Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
+        Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
     player=PlayerBall("Ball/it.png", [ width/10, height/10])
     bgImage = pygame.image.load("Backgrounds/main.png")
