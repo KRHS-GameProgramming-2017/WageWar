@@ -74,7 +74,8 @@ while True:
                 balls.remove(ball)
             
         
-        screen.fill (bgColor)        
+        screen.fill (bgColor) 
+        screen.blit(bgImage, bgRect)       
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image,player.rect)
