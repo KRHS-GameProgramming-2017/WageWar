@@ -19,7 +19,7 @@ while True:
         Ball("Ball/it.png", [3, 4], [random.randint(0,width),random.randint(0,height)], random.randint(5, 50)),
         Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
-        Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50))]
+        Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
         Ball("Ball/it.png",         [1, 3],     [70,200],   20),
         Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
