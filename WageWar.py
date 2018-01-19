@@ -27,7 +27,9 @@ while True:
         	Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
             Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
-    player=PlayerBall("Ball/it.png", [ width/2, height/2])
+    player=PlayerBall("Ball/it.png", [ width/10, height/10])
+    bgImage = pygame.image.load("Backgrounds/main.png")
+    bgRect = bgImage.get_rect()     
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
