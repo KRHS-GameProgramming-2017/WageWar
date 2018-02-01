@@ -108,7 +108,9 @@ while True:
              
         print "??"
         
-       
+       while true:
+           Props:
+               [Ball("Prop/food.png", [5, 8], [random.randint(0,width),random.randint(0,height)], random.randint(0, 0)),
     
     
     
