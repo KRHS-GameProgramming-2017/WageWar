@@ -83,7 +83,35 @@ while True:
     
     
     
-    
+     player=PlayerBall("Ball/it.png", [ width/2, height/2])
+    while player.living:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()   
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    player.go("up")
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    player.go("down")
+                if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                    player.go("left")
+                if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                    player.go("right")
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    player.go("stop up")
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    player.go("stop down")
+                if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                    player.go("stop left")
+                if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                    player.go("stop right")
+             
+        print "??"
+        
+       while true:
+           Props:
+               [Ball("Prop/food.png", [5, 8], [random.randint(0,width),random.randint(0,height)], random.randint(0, 0)),
     
     
     
@@ -91,3 +119,4 @@ while True:
     
     
     
+
