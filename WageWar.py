@@ -28,7 +28,7 @@ while True:
         Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
         Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
-    player=PlayerBall("Ball/it.png", [ width/2, height/2],random.randint(10, 50))
+    player=PlayerBall("Ball/obamatrigered.png", [ width/2, height/2],random.randint(10, 50))
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -83,7 +83,7 @@ while True:
     
     
     
-     player=PlayerBall("Ball/it.png", [ width/2, height/2])
+        player=PlayerBall("Ball/obamatrigered.png", [ width/2, height/2])
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -109,9 +109,7 @@ while True:
              
         print "??"
         
-       while true:
-           Props:
-               [Ball("Prop/food.png", [5, 8], [random.randint(0,width),random.randint(0,height)], random.randint(0, 0)),
+  
     
     
     
