@@ -20,6 +20,7 @@ while True:
         Ball("Ball/FaZe_Doge.png", [3, 6], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/fire.png", [3, 1], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
         Ball("Ball/itsboogie2988.png", [4, 7], [random.randint(0,width),random.randint(0,height)], random.randint(10, 50)),
+        
         Ball("Ball/FaZe_Doge.png",  [10, 3],    [300,200],  20),
         Ball("Ball/it.png",         [1, 3],     [70,200],   20),
         Ball("Ball/FaZe_Doge.png",  [7, 8],     [30,70],    20),
@@ -27,9 +28,13 @@ while True:
         Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
         Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
+<<<<<<< HEAD
     player=PlayerBall("Ball/it.png", [ width/10, height/10])
     bgImage = pygame.image.load("Backgrounds/main.png")
     bgRect = bgImage.get_rect()     
+=======
+    player=PlayerBall("Ball/it.png", [ width/2, height/2],random.randint(10, 50))
+>>>>>>> origin/master
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -85,6 +90,35 @@ while True:
     
     
     
+     player=PlayerBall("Ball/it.png", [ width/2, height/2])
+    while player.living:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()   
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    player.go("up")
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    player.go("down")
+                if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                    player.go("left")
+                if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                    player.go("right")
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    player.go("stop up")
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    player.go("stop down")
+                if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                    player.go("stop left")
+                if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                    player.go("stop right")
+             
+        print "??"
+        
+       while true:
+           Props:
+               [Ball("Prop/food.png", [5, 8], [random.randint(0,width),random.randint(0,height)], random.randint(0, 0)),
     
     
     
