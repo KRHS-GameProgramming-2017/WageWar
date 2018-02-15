@@ -34,6 +34,9 @@ while True:
     maxProps = 15
     propsOdds = 75
     props = []
+    backgroundImage = pygame.image.load("Backgrounds/main.png")
+    backgroundImage = pygame.transform.scale(backgroundImage, size)
+    backgroundRect = backgroundImage.get_rect()
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -80,7 +83,8 @@ while True:
                 balls.remove(ball)
             
         
-        screen.fill (bgColor)  
+        screen.fill (bgColor) 
+        screen.blit(backgroundImage, backgroundRect)
         for prop in props:
             screen.blit(prop.image, prop.rect)      
         for ball in balls:
