@@ -32,12 +32,12 @@ while True:
     player=PlayerBall("Ball/it.png", [ width/2, height/2])
     
     maxProps = 15
-    propsOdds = 75
+    propsOdds = 40
     props = []
     backgroundImage = pygame.image.load("Backgrounds/main.png")
     backgroundImage = pygame.transform.scale(backgroundImage, size)
     backgroundRect = backgroundImage.get_rect()
-    while player.living:
+    while player.living and len(balls) > 0:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()   
@@ -81,11 +81,18 @@ while True:
         for ball in balls:
             if not ball.living:
                 balls.remove(ball)
+                
+        for prop in props:
+            prop.ballBounce(player)
+            player.ballBounce(prop)
             
+        for prop in props:
+            if not prop.living:
+                props.remove(prop)
         
         screen.fill (bgColor) 
         screen.blit(backgroundImage, backgroundRect)
-        for prop in props:
+        for prop in props: 
             screen.blit(prop.image, prop.rect)      
         for ball in balls:
             screen.blit(ball.image, ball.rect)

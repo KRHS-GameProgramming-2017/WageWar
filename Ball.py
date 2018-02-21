@@ -39,7 +39,7 @@ class Ball():
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.size > other.size:
-                    self.size += other.size
+                    self.size += other.size/2
                     self.image = pygame.transform.scale(self.baseImage, [self.size, self.size])
                     self.rect = self.image.get_rect(center = self.rect.center)
                     
