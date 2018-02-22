@@ -28,7 +28,17 @@ while True:
         Ball("Ball/itsboogie2988.png", [7, 2],  [300,400],  10),
         Ball("Ball/Arch.png",          [4, 2],  [500,500],  40)]
         
+<<<<<<< HEAD
     player=PlayerBall("Ball/obamatrigered.png", [ width/2, height/2],random.randint(10, 50))
+=======
+<<<<<<< HEAD
+    player=PlayerBall("Ball/it.png", [ width/10, height/10])
+    bgImage = pygame.image.load("Backgrounds/main.png")
+    bgRect = bgImage.get_rect()     
+=======
+    player=PlayerBall("Ball/it.png", [ width/2, height/2],random.randint(10, 50))
+>>>>>>> origin/master
+>>>>>>> origin/master
     while player.living:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -73,7 +83,8 @@ while True:
                 balls.remove(ball)
             
         
-        screen.fill (bgColor)        
+        screen.fill (bgColor) 
+        screen.blit(bgImage, bgRect)       
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image,player.rect)
@@ -113,8 +124,8 @@ while True:
     
     
     
-
-    
-    
     
 
+    
+    
+    
